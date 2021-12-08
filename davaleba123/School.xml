@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<School>
+  <Students>
+    <Student>
+      <Name>
+      </Name>
+      <Lastname>
+      </Lastname>
+      <Id>
+      </Id>
+      <Password>
+      </Password>
+      <Class>
+      </Class>
+    </Student>
+    <Student>
+      <Name>qwe</Name>
+      <Lastname>qa</Lastname>
+      <Id> 6631547701</Id>
+      <Password>asd</Password>
+      <Class>
+      </Class>
+    </Student>
+    <Student>
+      <Name>Giorgi</Name>
+      <Lastname>Seturi</Lastname>
+      <Id> 0788774578</Id>
+      <Password>ps</Password>
+      <Class>C#</Class>
+    </Student>
+    <Student>
+      <Name>wqegft</Name>
+      <Lastname>wqer</Lastname>
+      <Id> 7518702446</Id>
+      <Password>qg</Password>
+      <Class>Class2</Class>
+    </Student>
+    <Student>
+      <Name>qw</Name>
+      <Lastname>qw</Lastname>
+      <Id> 0258726768</Id>
+      <Password>qw</Password>
+      <Class>C#</Class>
+    </Student>
+    <Student>
+      <Name>qwe</Name>
+      <Lastname>qwe</Lastname>
+      <Id> 7074232077</Id>
+      <Password>qwe</Password>
+      <Class>C#</Class>
+    </Student>
+    <Student>
+      <Name>jon</Name>
+      <Lastname>doe</Lastname>
+      <Id> 2606281388</Id>
+      <Password>e</Password>
+      <Class>C#</Class>
+    </Student>
+    <Student>
+      <Name>w</Name>
+      <Lastname>w</Lastname>
+      <Id> 6273815181</Id>
+      <Password>w</Password>
+      <Class>C#</Class>
+    </Student>
+  </Students>
+  <Teachers>
+    <Teacher>
+      <Name>
+      </Name>
+      <Lastname>
+      </Lastname>
+      <Id>
+      </Id>
+      <Password>
+      </Password>
+      <Class>
+      </Class>
+    </Teacher>
+    <Teacher>
+      <Name>qwert</Name>
+      <Lastname>qwert</Lastname>
+      <Id> 3657183688</Id>
+      <Password>qwert</Password>
+      <Class>
+      </Class>
+    </Teacher>
+    <Teacher>
+      <Name>q</Name>
+      <Lastname>q</Lastname>
+      <Id> 0237288514</Id>
+      <Password>q</Password>
+      <Class>C#</Class>
+    </Teacher>
+    <Teacher>
+      <Name>mas</Name>
+      <Lastname>mas</Lastname>
+      <Id> 1301458184</Id>
+      <Password>e</Password>
+      <Class>C#</Class>
+    </Teacher>
+  </Teachers>
+</School>

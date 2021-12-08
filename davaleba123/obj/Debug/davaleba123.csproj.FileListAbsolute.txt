@@ -1,0 +1,12 @@
+C:\Users\User\source\repos\davaleba123\davaleba123\bin\Debug\davaleba123.exe.config
+C:\Users\User\source\repos\davaleba123\davaleba123\bin\Debug\davaleba123.exe
+C:\Users\User\source\repos\davaleba123\davaleba123\bin\Debug\davaleba123.pdb
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.csprojAssemblyReference.cache
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.Form1.resources
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.Properties.Resources.resources
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.StudentsBook.resources
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.Teachers_School_book.resources
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.csproj.GenerateResource.cache
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.exe
+C:\Users\User\source\repos\davaleba123\davaleba123\obj\Debug\davaleba123.pdb

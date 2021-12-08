@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Messeges>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <nishani>2.8 10</nishani>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <HomeWork>
+    <Text>123123</Text>
+    <Type>HomeWork</Type>
+    <Teacher>12312</Teacher>
+  </HomeWork>
+  <HomeWork>
+    <Text>123123</Text>
+    <Type>HomeWork</Type>
+    <Teacher>12312</Teacher>
+  </HomeWork>
+  <HomeWork>
+    <Text>123123</Text>
+    <Type>HomeWork</Type>
+    <Teacher>12312</Teacher>
+  </HomeWork>
+  <HomeWork>
+    <Text>123123</Text>
+    <Type>HomeWork</Type>
+    <Teacher>12312</Teacher>
+  </HomeWork>
+  <HomeWork>
+    <Text>123123</Text>
+    <Type>HomeWork</Type>
+    <Teacher>12312</Teacher>
+  </HomeWork>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <Grade>
+  </Grade>
+  <nishani>5.22222222222222 9</nishani>
+  <Grade>
+    <Text>1</Text>
+    <Type>grade</Type>
+    <Teacher>Teacher_M Giorgi Seturi</Teacher>
+  </Grade>
+  <Grade>
+    <Text>1</Text>
+    <Type>grade</Type>
+    <Teacher>Teacher_M qw qw</Teacher>
+  </Grade>
+  <Grade>
+    <Text>1</Text>
+    <Type>grade</Type>
+    <Teacher>Teacher_M qwe qwe</Teacher>
+  </Grade>
+  <Grade>
+    <Text>2</Text>
+    <Type>grade</Type>
+    <Teacher>Teacher_M Giorgi Seturi</Teacher>
+  </Grade>
+  <Grade>
+    <Text>2</Text>
+    <Type>grade</Type>
+    <Teacher>Teacher_M qw qw</Teacher>
+  </Grade>
+  <Messege>
+    <Text>qw</Text>
+    <Type>Messege</Type>
+    <Teacher>Teacher_M</Teacher>
+  </Messege>
+  <Messege>
+    <Text>qw</Text>
+    <Type>Messege</Type>
+    <Teacher>Teacher_M</Teacher>
+  </Messege>
+  <HomeWork>
+    <Text>sdasd</Text>
+    <Type>HomeWork</Type>
+    <Teacher>q q</Teacher>
+    <titel>dasd</titel>
+  </HomeWork>
+  <HomeWork>
+    <Text>sdasd</Text>
+    <Type>HomeWork</Type>
+    <Teacher>q q</Teacher>
+    <titel>dasd</titel>
+  </HomeWork>
+  <HomeWork>
+    <Text>sdasd</Text>
+    <Type>HomeWork</Type>
+    <Teacher>q q</Teacher>
+    <titel>dasd</titel>
+  </HomeWork>
+  <HomeWork>
+    <Text>sdasd</Text>
+    <Type>HomeWork</Type>
+    <Teacher>q q</Teacher>
+    <titel>dasd</titel>
+  </HomeWork>
+  <HomeWork>
+    <Text>sdasd</Text>
+    <Type>HomeWork</Type>
+    <Teacher>q q</Teacher>
+    <titel>dasd</titel>
+  </HomeWork>
+</Messeges>
