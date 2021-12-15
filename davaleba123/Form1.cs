@@ -10,7 +10,9 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Threading;
 using davaleba123;
-
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace davaleba123
 {
@@ -24,7 +26,7 @@ namespace davaleba123
         public XmlDocument Exdatabase;
         //XmlDocument School;
 
-        void Add(string name, string lastname, string id,string Class,string password)
+        void Add(string name, string lastname,string Class,string password)
         {
             if (checkBox2.Checked == true)
             {
@@ -33,156 +35,17 @@ namespace davaleba123
 
 
                 SQlcommun.addStudent(name+" "+lastname,Class,password);
-                /*
-                XmlNode Student = School.CreateElement("Student");
-                XmlNode name_ = School.CreateElement("Name");
-                XmlNode lastname_ = School.CreateElement("Lastname");
-                XmlNode id_= School.CreateElement("Id");
-                XmlNode password_ = School.CreateElement("Password");
-                XmlNode Classes_ = School.CreateElement("Class");
-                XmlNode exclusiveDb = School.CreateElement("DataBaseAdress");
-                name_.InnerText = name;
-                lastname_.InnerText = lastname;
-                id_.InnerText = id;
-                password_.InnerText = password;
-                Classes_.InnerText = Class;
                 
-                
-
-                Student.AppendChild(name_);
-                Student.AppendChild(lastname_);
-                Student.AppendChild(id_);
-                Student.AppendChild(password_);
-                Student.AppendChild(Classes_) ;
-                School.GetElementsByTagName("Students")[0].AppendChild(Student);
-                School.Save("C://Users//User//source//repos//davaleba123//davaleba123//School.xml");
-                School.Load("C://Users//User//source//repos//davaleba123//davaleba123//School.xml");
-                XmlDocument x = new XmlDocument();
-                x.Load("C://Users//User//source//repos//davaleba123//davaleba123//IdAddress.xml");
-                XmlNode Student_ = x.CreateElement("student");
-                XmlNode iid = x.CreateElement("id");
-                XmlNode andress = x.CreateElement("address");
-                iid.InnerText = id;
-                andress.InnerText = "";
-                Student_.AppendChild(iid);
-                Student_.AppendChild(andress);
-                //x.SelectSingleNode("Students").AppendChild(Student_);
-                Alert("Succes_R*S");
-                */
             }
             if (checkBox1.Checked == true)
             {
                 SQlcommun.addStudent(name + " " + lastname, Class, password);
-                /*
-                XmlNode Teacher = School.CreateElement("Teacher");
-                XmlNode name_ = School.CreateElement("Name");
-                XmlNode lastname_ = School.CreateElement("Lastname");
-                XmlNode id_ = School.CreateElement("Id");
-                XmlNode password_ = School.CreateElement("Password");
-                XmlNode Classes_ = School.CreateElement("Class");
-                
-                name_.InnerText = name;
-                lastname_.InnerText = lastname;
-                id_.InnerText = id;
-                password_.InnerText = password;
-                Classes_.InnerText = Class;
-                Teacher.AppendChild(name_);
-                Teacher.AppendChild(lastname_);
-                Teacher.AppendChild(id_);
-                Teacher.AppendChild(password_);
-                Teacher.AppendChild(Classes_);
-                School.GetElementsByTagName("Teachers")[0].AppendChild(Teacher);
-                School.Save("C://Users//User//source//repos//davaleba123//davaleba123//School.xml");
-                School.Load("C://Users//User//source//repos//davaleba123//davaleba123//School.xml");
-                XmlDocument x = new XmlDocument();
-                x.Load("C://Users//User//source//repos//davaleba123//davaleba123//IdAddress.xml");
-                XmlNode Student_ = x.CreateElement("teacher");
-                XmlNode iid = x.CreateElement("id");
-                XmlNode andress = x.CreateElement("address");
-                iid.InnerText = id;
-                andress.InnerText = "";
-                Student_.AppendChild(iid);
-                Student_.AppendChild(andress);
-                //x.SelectSingleNode("Teachers").AppendChild(Student_);
-                Alert("Succes_R*T");
-                */
-            }
-
-        }
-
-        bool Scheck(string name ,string lastname)
-        {
-           
-            foreach (XmlNode x in School.SelectSingleNode("/School/Students").ChildNodes)
-                {
-                    if (x.SelectSingleNode("Name").InnerText == name && x.SelectSingleNode("Lastname").InnerText == lastname)
-                    {
-                        return false;
-                    }
-
-                }
-                textBox8.Text = "e";
-                return true;
-
-            
-        }
-        bool Scheck(string name, string lastname , string password)
-        {
-            foreach (XmlNode x in School.SelectSingleNode("/School/Students").ChildNodes)
-            {
-               
-                if (x.SelectSingleNode("Name").InnerText == name && x.SelectSingleNode("Lastname").InnerText == lastname && x.SelectSingleNode("Password").InnerText == password)
-                {
-                    
-                    Alert("Taken_N*S");
-                    return false;
-
-                }
-            }
-            textBox8.Text = "e";
-            return true;
-
-        }
-        bool Tcheck(string name, string lastname, string password)
-        {
-
-
-            foreach (XmlNode x in School.SelectNodes("/School/Teachers/Teacher"))
-            {
-                
-
-                if (x.SelectSingleNode("Name").InnerText == name && x.SelectSingleNode("Lastname").InnerText == lastname&& x.SelectSingleNode("Password").InnerText == password)
-                {
-
-                        Alert("Taken_N_T");
-                        textBox8.Text = "e";
-                     
-                        return false;
-                    
-                }
-            }
-            textBox8.Text = "e";
-            return true;
-        }
-        bool Tcheck(string name,string lastname)
-        {
-   
-            foreach (XmlNode x in School.SelectNodes("/School/Teachers/Teacher"))
-            {
               
-
-                if (x.SelectSingleNode("Name").InnerText == name && x.SelectSingleNode("Lastname").InnerText == lastname)
-                {
-                    Alert("Taken_N");
-                    textBox8.Text = "I";
-                    return false;
-                    
-                }
             }
-            textBox8.Text = "e";
-            return true;
+
         }
 
+        
         public Form1()
         {
             InitializeComponent();
@@ -250,46 +113,24 @@ namespace davaleba123
         {
             School.Load("C://Users//User//source//repos//davaleba123//davaleba123//School.xml");
            
-            foreach (XmlNode x in School.SelectNodes("Student"))
-            {
-                
-            }
             if (textBox4.Text==textBox6.Text) {
                 
                 if (checkBox1.Checked == true)
                 {
                    
-                    if (Tcheck(textBox5.Text, textBox3.Text) == true)
-                    {
-                        Generator = new Random();
-                        string id = " ";
-                        for (int i = 0; i < 10; i++)
-                        {
-                            id = id + Generator.Next(0, 9).ToString();
-                        }
-                        Class = comboBox1.SelectedItem as string;
-                        
-                        Add(textBox5.Text, textBox3.Text, id,Class, textBox4.Text);
                  
-                    }
+                        
+                        Add(textBox5.Text, textBox3.Text,comboBox1.SelectedItem.ToString(), textBox4.Text);
+                 
+                    
 
                 } else if (checkBox2.Checked == true)
                 {
 
-                    if (Scheck(textBox5.Text, textBox3.Text) == true)
-                    {
-                        
-                        Generator = new Random();
-                        string id = " ";
-                        for (int i = 0; i < 10; i++)
-                        {
-                            id = id + Generator.Next(0, 9).ToString();
-                        }
-                        Class = comboBox1.SelectedItem as string;
-                        
-                        Add(textBox5.Text, textBox3.Text,id,Class, textBox4.Text);
+                   
+                        Add(textBox5.Text, textBox3.Text, comboBox1.SelectedItem.ToString(), textBox4.Text);
               
-                    }
+                    
 
                 }
             }
@@ -350,49 +191,45 @@ namespace davaleba123
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (Scheck(textBox1.Text,textBox7.Text,textBox2.Text)==false )
-            {
-                foreach (XmlNode x in School.SelectSingleNode("/School/Students").ChildNodes)
-                {
 
-                    if (x.SelectSingleNode("Name").InnerText == textBox1.Text && x.SelectSingleNode("Lastname").InnerText == textBox7.Text && x.SelectSingleNode("Password").InnerText == textBox2.Text)
-                    {
-                        UInfo = new List<string>() { };
-                        UInfo.Add(x.SelectSingleNode("Name").InnerText);
-                       UInfo.Add(x.SelectSingleNode("Lastname").InnerText);
-                      UInfo.Add(x.SelectSingleNode("Password").InnerText);
-                       UInfo.Add( x.SelectSingleNode("Id").InnerText);
-                        UInfo.Add(x.SelectSingleNode("Class").InnerText);
-                        UInfo.Add("Student");
-                        Xload(UInfo);
-                        this.Hide();
-                        textBox8.Text=x.SelectSingleNode("Id").InnerText;
-                       
-                    }
-                }
-              
-            }else if (Tcheck(textBox1.Text, textBox7.Text, textBox2.Text) == false)
+
+            if (SQlcommun.getStudent(textBox1.Text + " " + textBox7.Text) == true)
             {
-                foreach (XmlNode x in School.SelectSingleNode("/School/Teachers").ChildNodes)
+                UInfo = new List<string>() { };
+
+                string x;
+                DataTable tb = SQlcommun.get_Student(textBox1.Text + " " + textBox7.Text);
+                DataRow[] y = tb.Select();
+                for(int i = 0; i< 5; i++)
                 {
-                    if (x.SelectSingleNode("Name").InnerText == textBox1.Text && x.SelectSingleNode("Lastname").InnerText == textBox7.Text && x.SelectSingleNode("Password").InnerText == textBox2.Text)
-                    {
-                        UInfo = new List<string>() { };
-                        UInfo.Add(x.SelectSingleNode("Name").InnerText);
-                        UInfo.Add(x.SelectSingleNode("Lastname").InnerText);
-                        UInfo.Add(x.SelectSingleNode("Password").InnerText);
-                        UInfo.Add(x.SelectSingleNode("Id").InnerText);
-                        UInfo.Add(x.SelectSingleNode("Class").InnerText);
-                        UInfo.Add("Teacher");
-                        Xload(UInfo);
-                        this.Hide();
-                        textBox8.Text = x.SelectSingleNode("Id").InnerText;
-                        
-                    }
+                    x = y[0][i].ToString();
+                    UInfo.Add(x);
                 }
+
+               
+                UInfo.Add("Student");
+                Xload(UInfo);
+                this.Hide();
+                
+            }
+            else if (SQlcommun.getTeaecher(textBox1.Text + " " + textBox7.Text)==true)
+            {
+                DataTable tb = SQlcommun.get_Student(textBox1.Text + " " + textBox7.Text);
+                DataRow[] y = tb.Select();
+                string x;
+                for (int i = 0; i< 5; i++)
+                {
+                    x = y[0][i].ToString();
+                    UInfo.Add(x);
+                }
+                
+               
+               
+                UInfo.Add("Teacher");
+                Xload(UInfo);
+                this.Hide();
 
             }
-            Alert("Not_R");
            
         }
         public  void Xload(List<string> x)

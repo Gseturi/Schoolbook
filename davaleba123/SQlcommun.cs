@@ -73,30 +73,100 @@ namespace davaleba123
 
 
         }
-        public static void getTeaecher(string fullname, string subject)
+        public static bool getTeaecher(string fullname)
         {
           
             con = new SqlConnection(connectionString);
             comand = new SqlCommand("get_Teacher", con);
             comand.CommandType = CommandType.StoredProcedure;
+            SqlParameter[] par = new SqlParameter[1];
+            par[0] = new SqlParameter("@fullname", SqlDbType.VarChar);
+            par[0].Value = fullname;
+            comand.Parameters.AddRange(par);
+            con.Open();
+            comand.ExecuteNonQuery();
+            con.Close();
+
             DataTable dT = new DataTable();
             SqlDataAdapter ada;
             ada = new SqlDataAdapter(comand);
             ada.Fill(dT);
-            
 
+            if (dT.Rows.Count==0 || dT.Rows.Count ==null)
+            {
+                return false;
+            }
+
+            return true;
         }
-        public static void getStudent(string fullname, string subject)
+        public static bool getStudent(string fullname)
+        {
+
+            con = new SqlConnection(connectionString);
+            comand = new SqlCommand("get_student", con);
+            comand.CommandType = CommandType.StoredProcedure;
+            SqlParameter[] par = new SqlParameter[1];
+            par[0] = new SqlParameter("@fullname", SqlDbType.VarChar);
+            par[0].Value = fullname;
+            comand.Parameters.AddRange(par);
+            con.Open();
+            comand.ExecuteNonQuery();
+            con.Close();
+
+            DataTable dT = new DataTable();
+            SqlDataAdapter ada;
+            ada = new SqlDataAdapter(comand);
+            ada.Fill(dT);
+
+            if (dT.Rows.Count == 0 || dT.Rows.Count == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+        public static DataTable get_Teaecher(string fullname)
+        {
+
+            con = new SqlConnection(connectionString);
+            comand = new SqlCommand("get_Teacher", con);
+            comand.CommandType = CommandType.StoredProcedure;
+            SqlParameter[] par = new SqlParameter[1];
+            par[0] = new SqlParameter("@fullname", SqlDbType.VarChar);
+            par[0].Value = fullname;
+            comand.Parameters.AddRange(par);
+            con.Open();
+            comand.ExecuteNonQuery();
+            con.Close();
+
+            DataTable dT = new DataTable();
+            SqlDataAdapter ada;
+            
+            ada = new SqlDataAdapter(comand);
+            ada.Fill(dT);
+            return dT;
+        }
+        public static DataTable get_Student(string fullname)
         {
             con = new SqlConnection(connectionString);
             comand = new SqlCommand("get_student", con);
             comand.CommandType = CommandType.StoredProcedure;
+            SqlParameter[] par = new SqlParameter[1];
+            par[0] = new SqlParameter("@fullname", SqlDbType.VarChar);
+            par[0].Value = fullname;
+            comand.Parameters.AddRange(par);
+            con.Open();
+            comand.ExecuteNonQuery();
+            con.Close();
+
             DataTable dT = new DataTable();
             SqlDataAdapter ada;
             ada = new SqlDataAdapter(comand);
             ada.Fill(dT);
 
+            return dT;
         }
+
         public static void getGrade(string fullname, string subject)
         {
             con = new SqlConnection(connectionString);
@@ -108,7 +178,7 @@ namespace davaleba123
             ada.Fill(dT);
 
         }
-        public static void GetTeachers(string fullname, string subject)
+        public static void Get_Teachers(string fullname, string subject)
         {
             con = new SqlConnection(connectionString);
             comand = new SqlCommand("GetTeachers", con);
